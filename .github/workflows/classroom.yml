@@ -16,8 +16,7 @@ jobs:
     if: github.actor != 'github-classroom[bot]'
     steps:
       - uses: actions/setup-node@v3
-        with:
+        with: 
           node-version: 16
       - uses: actions/checkout@v4
-      - uses:eduction/autograding@v1
       - uses: education/autograding@v1
