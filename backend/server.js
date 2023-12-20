@@ -1,7 +1,6 @@
 const express = require ("express");
 const bodyParser = require  ("body-parser")
 const {
-  initializeDatabase,
   readTeachers,
   readTeacherInfo,
   addTeacher,
@@ -11,7 +10,8 @@ const {
   readStudents,
   readStudentInfo,
   updateStudent,
-  deleteStudent
+  deleteStudent,
+  dbinitialize
 } = require("./database.js");
 
 const app = express();
@@ -57,6 +57,9 @@ app.post("/addTeacher", async function (req, res) {
 
 app.post("/editTeacher", async function (req, res) {
   let reqBody = req.body;
+  console.log(
+    "Request received to update teacher. Req body: " + JSON.stringify(reqBody)
+  );
   let data = await updateTeacher(reqBody.name, reqBody.age, reqBody.id);
 
   res.setHeader("Content-Type", "application/json");

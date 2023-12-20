@@ -17,7 +17,7 @@ const routes: Routes = [
   { path: 'editTeacher', component: EditTeacherComponent }
 ];
 
-NgModule({
+@NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
