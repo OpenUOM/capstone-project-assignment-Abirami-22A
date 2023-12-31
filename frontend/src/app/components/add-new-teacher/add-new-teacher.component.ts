@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component} from '@angular/core';
 import {AppServiceService} from '../../app-service.service';
 import { Router } from '@angular/router';
 
